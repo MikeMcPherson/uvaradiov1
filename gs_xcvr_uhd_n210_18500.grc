@@ -46,7 +46,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>gs_xcvr_uhd_n210_18500</value>
+      <value>gs_xcvr_uhd</value>
     </param>
     <param>
       <key>max_nouts</key>
@@ -245,6 +245,60 @@
     </param>
     <param>
       <key>_coordinate</key>
+      <value>(528, 580)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>gpredict_freq</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>401.040e6</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(528, 508)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>libertas_freq</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>401.040e6</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
       <value>(736, 4)</value>
     </param>
     <param>
@@ -378,6 +432,60 @@
     </param>
   </block>
   <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(656, 548)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>rx_doppler</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>gpredict_freq - libertas_freq</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(760, 508)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>rx_freq</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>libertas_freq + rx_doppler</value>
+    </param>
+  </block>
+  <block>
     <key>variable_qtgui_range</key>
     <param>
       <key>comment</key>
@@ -385,7 +493,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>0</value>
+      <value>20</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -612,14 +720,46 @@
     </param>
   </block>
   <block>
-    <key>variable_qtgui_range</key>
+    <key>variable</key>
     <param>
       <key>comment</key>
       <value></value>
     </param>
     <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(760, 580)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>tx_freq</value>
+    </param>
+    <param>
       <key>value</key>
-      <value>20</value>
+      <value>libertas_freq - rx_doppler</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_qtgui_range</key>
+    <param>
+      <key>comment</key>
+      <value>MAX TX GAIN 21.5 WHEN RF APMPLIFIER ENABLED
+PREVENTS DAMAGE TO AMP
+PREVENTS DISTORTION OF TRANSMIT SIGNAL
+
+N210/UBX total range is 0 to 31.5 in 0.5 step 
+increments; approx. 100mW RF output at 31.5</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>14</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -663,7 +803,7 @@
     </param>
     <param>
       <key>stop</key>
-      <value>31.5</value>
+      <value>21.5</value>
     </param>
     <param>
       <key>rangeType</key>
@@ -833,6 +973,57 @@ demodulator</value>
     <param>
       <key>minoutbuf</key>
       <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_file_sink</key>
+    <param>
+      <key>append</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>file</key>
+      <value>/zfs0/iqfiles/iq03jul2019</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(376, 228)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_file_sink_0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>unbuffered</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
     </param>
   </block>
   <block>
@@ -1460,6 +1651,92 @@ byte stream</value>
     </param>
   </block>
   <block>
+    <key>gpredict_MsgPairToVar</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(352, 556)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>gpredict_MsgPairToVar_0</value>
+    </param>
+    <param>
+      <key>target</key>
+      <value>gpredict_freq</value>
+    </param>
+  </block>
+  <block>
+    <key>gpredict_doppler</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(72, 532)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>gpredict_doppler_0</value>
+    </param>
+    <param>
+      <key>gpredict_port</key>
+      <value>7356</value>
+    </param>
+    <param>
+      <key>gpredict_host</key>
+      <value>localhost</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>verbose</key>
+      <value>False</value>
+    </param>
+  </block>
+  <block>
     <key>low_pass_filter</key>
     <param>
       <key>beta</key>
@@ -1963,53 +2240,6 @@ byte stream</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(32, 116)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>rx_freq</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value></value>
-    </param>
-    <param>
-      <key>short_id</key>
-      <value></value>
-    </param>
-    <param>
-      <key>hide</key>
-      <value>none</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>eng_float</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>401.040e6</value>
-    </param>
-  </block>
-  <block>
-    <key>parameter</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
       <value>1</value>
     </param>
     <param>
@@ -2297,53 +2527,6 @@ byte stream</value>
     <param>
       <key>minoutbuf</key>
       <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>parameter</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1144, 908)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>tx_freq</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value></value>
-    </param>
-    <param>
-      <key>short_id</key>
-      <value></value>
-    </param>
-    <param>
-      <key>hide</key>
-      <value>none</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>eng_float</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>401.040e6</value>
     </param>
   </block>
   <block>
@@ -3082,7 +3265,7 @@ One per uplink packet</value>
     </param>
     <param>
       <key>clock_source0</key>
-      <value>internal</value>
+      <value>gpsdo</value>
     </param>
     <param>
       <key>sd_spec0</key>
@@ -3090,7 +3273,7 @@ One per uplink packet</value>
     </param>
     <param>
       <key>time_source0</key>
-      <value></value>
+      <value>gpsdo</value>
     </param>
     <param>
       <key>clock_source1</key>
@@ -4417,7 +4600,7 @@ One per uplink packet</value>
     </param>
     <param>
       <key>clock_source0</key>
-      <value>internal</value>
+      <value>gpsdo</value>
     </param>
     <param>
       <key>sd_spec0</key>
@@ -4425,7 +4608,7 @@ One per uplink packet</value>
     </param>
     <param>
       <key>time_source0</key>
-      <value></value>
+      <value>gpsdo</value>
     </param>
     <param>
       <key>clock_source1</key>
@@ -4797,6 +4980,12 @@ One per uplink packet</value>
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>gpredict_doppler_0</source_block_id>
+    <sink_block_id>gpredict_MsgPairToVar_0</sink_block_id>
+    <source_key>freq</source_key>
+    <sink_key>inpair</sink_key>
+  </connection>
+  <connection>
     <source_block_id>low_pass_filter_0</source_block_id>
     <sink_block_id>analog_quadrature_demod_cf_1</sink_block_id>
     <source_key>0</source_key>
@@ -4855,6 +5044,12 @@ One per uplink packet</value>
     <sink_block_id>blocks_socket_pdu_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>pdus</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>uhd_usrp_source_0</source_block_id>
+    <sink_block_id>blocks_file_sink_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>uhd_usrp_source_0</source_block_id>
