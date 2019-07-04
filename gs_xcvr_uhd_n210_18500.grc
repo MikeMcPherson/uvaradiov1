@@ -493,7 +493,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>20</value>
+      <value>31.5</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -759,7 +759,7 @@ increments; approx. 100mW RF output at 31.5</value>
     </param>
     <param>
       <key>value</key>
-      <value>14</value>
+      <value>21.5</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -799,7 +799,7 @@ increments; approx. 100mW RF output at 31.5</value>
     </param>
     <param>
       <key>step</key>
-      <value>1</value>
+      <value>0.5</value>
     </param>
     <param>
       <key>stop</key>
@@ -999,7 +999,7 @@ demodulator</value>
     </param>
     <param>
       <key>file</key>
-      <value>/zfs0/iqfiles/iq03jul2019</value>
+      <value>/zfs0/iqfiles/pass_iq.tmp</value>
     </param>
     <param>
       <key>_coordinate</key>
