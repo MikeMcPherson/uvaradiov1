@@ -144,26 +144,18 @@
     </param>
   </block>
   <block>
-    <key>variable_qtgui_range</key>
+    <key>variable</key>
     <param>
       <key>comment</key>
       <value></value>
     </param>
     <param>
-      <key>value</key>
-      <value>.75</value>
-    </param>
-    <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>True</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(552, 856)</value>
-    </param>
-    <param>
-      <key>gui_hint</key>
-      <value>6,0,1,4</value>
+      <value>(520, 880)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -174,36 +166,8 @@
       <value>bb_gain</value>
     </param>
     <param>
-      <key>label</key>
-      <value>Baseband gain</value>
-    </param>
-    <param>
-      <key>min_len</key>
-      <value>200</value>
-    </param>
-    <param>
-      <key>orient</key>
-      <value>Qt.Horizontal</value>
-    </param>
-    <param>
-      <key>start</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>step</key>
-      <value>.01</value>
-    </param>
-    <param>
-      <key>stop</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>rangeType</key>
-      <value>float</value>
-    </param>
-    <param>
-      <key>widget</key>
-      <value>counter_slider</value>
+      <key>value</key>
+      <value>0.75</value>
     </param>
   </block>
   <block>
@@ -415,7 +379,7 @@
     </param>
     <param>
       <key>gui_hint</key>
-      <value>4,0,1,4</value>
+      <value>8,0,1,4</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -618,7 +582,7 @@ increments; approx. 100mW RF output at 31.5</value>
     </param>
     <param>
       <key>gui_hint</key>
-      <value>7,0,1,4</value>
+      <value>9,0,1,4</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2291,7 +2255,7 @@ byte stream</value>
     </param>
     <param>
       <key>gui_hint</key>
-      <value></value>
+      <value>4,0,4,4</value>
     </param>
     <param>
       <key>_rotation</key>
