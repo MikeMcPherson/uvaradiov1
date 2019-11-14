@@ -943,7 +943,7 @@ demodulator</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(248, 284)</value>
+      <value>(512, 268)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1006,7 +1006,7 @@ demodulator</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(512, 212)</value>
+      <value>(640, 612)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1151,7 +1151,7 @@ demodulator</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(552, 296)</value>
+      <value>(704, 248)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1964,7 +1964,7 @@ byte stream</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(960, 476)</value>
+      <value>(832, 540)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -2251,7 +2251,7 @@ byte stream</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(968, 612)</value>
+      <value>(640, 484)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -5039,7 +5039,7 @@ One per uplink packet</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(672, 308)</value>
+      <value>(320, 276)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -5147,7 +5147,7 @@ One per uplink packet</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(792, 500)</value>
+      <value>(456, 564)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -5227,7 +5227,7 @@ One per uplink packet</value>
   </connection>
   <connection>
     <source_block_id>blocks_multiply_xx_1</source_block_id>
-    <sink_block_id>virtual_sink_1</sink_block_id>
+    <sink_block_id>rational_resampler_xxx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -5353,19 +5353,13 @@ One per uplink packet</value>
   </connection>
   <connection>
     <source_block_id>uhd_usrp_source_0</source_block_id>
-    <sink_block_id>blocks_file_sink_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>uhd_usrp_source_0</source_block_id>
     <sink_block_id>blocks_multiply_xx_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>uhd_usrp_source_0</source_block_id>
-    <sink_block_id>rational_resampler_xxx_0</sink_block_id>
+    <sink_block_id>virtual_sink_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -5378,6 +5372,12 @@ One per uplink packet</value>
   <connection>
     <source_block_id>virtual_source_0_2_0_1</source_block_id>
     <sink_block_id>digital_gmsk_mod_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>virtual_source_1</source_block_id>
+    <sink_block_id>blocks_file_sink_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
